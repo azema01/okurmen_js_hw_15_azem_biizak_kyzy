@@ -15,25 +15,26 @@ document.addEventListener('DOMContentLoaded', () => {
       const name = document.createElement('p');
       const flag = document.createElement('img');
       const center = document.createElement('item.capital');
-
+      const region  = document.createElement('p');
+      const subregion = document.createElement('p');
 
       name.innerHTML = item.name.common
       flag.setAttribute('src', item.flags.svg);
       flag.style.width = '100px';
       flag.style.height = 'auto';
       center.innerHTML = item.capital 
-      // region.innerHTML = item.region
-      // subregion.innerHTML = item.subregion
+      region.innerHTML = item.region
+      subregion.innerHTML = item.subregion
 
 
       countries.appendChild(name);
       countries.appendChild(flag);
       countries.appendChild(center);
-      // countries.appendChild(region);
-      // countries.appendChild(subregion);
+      countries.appendChild(region);
+      countries.appendChild(subregion);
       
 
-      console.log(item);
+      console.log(item.region);
     });
   }
 });
